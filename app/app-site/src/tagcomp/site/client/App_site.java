@@ -34,7 +34,7 @@ public class App_site implements EntryPoint
 		// Create the site menu.
 		this.createMenu();
 
-		// RootPanel.get("contentContainer").add(new SessionController(menu, 999));
+//		RootPanel.get("contentContainer").add(new LoginMenuOptions(menu, 999));
 		RootPanel.get("contentContainer").add(new Label("Here goes the main content..."));
 		
 		// Me conecto a la historia.
@@ -63,7 +63,7 @@ public class App_site implements EntryPoint
 		menu = new Menu();
 		menu.addItem("Option 1", link, 0);
 		menu.addItem("Option 2", link, 1);
-		new LoginWidget(menu, 999);
+		new LoginMenuOptions(menu, 2);
 		RootPanel.get("menuContainer").add(menu);
 	}
 }

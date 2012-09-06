@@ -94,7 +94,7 @@ public class Menu extends Widget
 	 * @param target El link a utilizar.
 	 * @param index El índice en el que insertar el ítem. En caso de ser mayor que el el número de ítems existentes se agrega al final. 
 	 */
-	public Item addItem(String title, Anchor target, int index)
+	public int addItem(String title, Anchor target, int index)
 	{
 		Item item = new Item();
 		item.target = target;
@@ -103,7 +103,7 @@ public class Menu extends Widget
 		item.td.addClassName("nosub");
 		items.add(item);
 		DOM.insertChild(tr, item.td, index);
-		return item;
+		return items.size()-1;
 	}
 	
 	/**
@@ -112,7 +112,7 @@ public class Menu extends Widget
 	 * @param widget El contenido a agregar al popup.
 	 * @param index El índice en el que insertar el ítem. En caso de ser mayor que el el número de ítems existentes se agrega al final. 
 	 */
-	public Item addSubMenu(String title, Widget content, int index)
+	public int addSubMenu(String title, Widget content, int index)
 	{
 		Item item = new Item();
 		item.content = content;
@@ -120,7 +120,7 @@ public class Menu extends Widget
 		item.td.setInnerText(title + "▾"); // Otros caracteres que pueden usarse para demarcar un menu: ‣ ▸ ▾ » › ↴ ⇩ ⤵ ◢ ‣  
 		items.add(item);
 		DOM.insertChild(tr, item.td, index);
-		return item;
+		return items.size()-1;
 	}
 
 	/**
@@ -141,14 +141,14 @@ public class Menu extends Widget
 	 * @param reference A valid item from this menu.
 	 * @param newTitle The new title to assign.
 	 */
-	public void renameItem(Item reference, String newTitle)
+	public void renameItem(int index, String newTitle)
 	{
+		Item reference = items.get(index); 
 		if(reference.target != null)
 			reference.td.setInnerText(newTitle);
 		else
 			reference.td.setInnerText(newTitle + "▾");
 	}
-	
 	
 	/**
 	 * Escucha por eventos. Es público solo por necesidad de sobrecargar el método original, pero no debiera ser utilizado para usar el menú.

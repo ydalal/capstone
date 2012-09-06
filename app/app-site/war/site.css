@@ -1,7 +1,8 @@
 body
 {
-	background-image: url(resources/bkgtile.gif) !important; 
+/*	background-image: url(resources/bkgtile.gif) !important; 
 	color:#EEE !important; 
+*/
 	font-size:100%; /* Necesario para permitir trabajar con EM el tamaño de los textos */
 }
 
