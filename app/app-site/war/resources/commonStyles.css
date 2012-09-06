@@ -1,0 +1,330 @@
+/*==================================================================================================
+||	Nombre:			Los Héroes 1
+||  Autor:			Daniel Langdon (08/2010)
+||	Descripción: 	Estilos base para las distintas librería gráficas de eft.utils 
+||					y para servir como base a otras aplicaciones. 
+||					Estilo en base a grises y naranjos. Se encuentran divididos en 3 niveles:
+||						- Outer: Estilos para la sección exterior de la aplicación
+||						- Inner: Estilos para la sección central, como por ejemplo tabs centrales.
+||						- Inner2: Estilos de contenido secundario, dentro de Inner.
+\=================================================================================================== */
+
+/* -------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------- Ajustes base GWT ------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
+
+.gwt-DisclosurePanel .content
+{
+	border: 0px !important;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.gwt-TabPanel
+{
+	width:100%
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------- Commons ---------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
+
+body, table, td, tr, div, baseBox 
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.title
+{
+	color: #006eb6;
+	font-size: 25px;
+	margin: 20px 20px 10px;
+	font-style:italic;
+}
+
+.error
+{
+	font-size: 12px;
+	color:#FF8C00;
+	font-weight:bold;
+	text-indent: 1px;
+	height: 20px;
+	margin-left: 20px;
+}
+
+.status
+{
+	font-size: 12px;
+	font-weight: bold;
+	color:#0175C0;/* #8B4513;*/
+	text-indent: 1px;
+	height: 20px;
+	margin-left: 20px;
+}
+
+.bold
+{	
+	font-weight: bold;
+}
+
+.smallIcon
+{
+	width:15px;
+	height:15px;
+}
+
+.mediumIcon
+{
+	width:20px;
+	height:20px;
+}
+
+.bigIcon
+{
+	width:25px;
+	height:25px;
+}
+
+.biggerIcon
+{
+	top: 30%;   
+    left: 40%;   
+    position: absolute; 
+}
+
+.handCursor
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+.header
+{
+	font-size: 12px;
+    font-weight: bold;
+}
+
+.oddRow
+{
+	background-color:#F5F5F5;
+}
+
+.evenRow
+{
+	background-color:#FFFFFF;
+}
+
+/* Paginador. ----------------------------------------------------------------------------------------- */
+.paginador 
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.paginador td 
+{
+	border:solid 1px #CCCCCC;
+	text-align:center;
+	padding:3px;
+	cursor:pointer;
+	width:15px;
+}
+
+.paginador .void 
+{
+	border-color:white;
+	cursor:default;
+}
+
+.paginador .selected 
+{
+	border-color:white;
+	font-weight: bold;
+	cursor:default;
+}
+
+.paginador .disabled 
+{
+	color:#CCCCCC;
+	cursor:default;
+}
+
+.paginador .arrows 
+{
+	width:35px;
+}
+
+.paginador .caption 
+{
+	border:0px !important;
+	font-size: 10px;
+	cursor:default;
+	margin: auto;
+}
+
+/* Tabla de datos. ------------------------------------------------------------------------------------- */
+.dataTable
+{
+	border-collapse:collapse;
+	border-bottom:1px solid #D1D7E8;
+	margin: 20px auto 20px auto;
+	width:100%;
+}
+
+.dataTable td
+{
+	padding:2px 5px 2px 5px;
+	border-right:1px solid #D1D7E8;
+	border-left:1px solid #D1D7E8;
+}
+
+.dataTable .header
+{
+	border-bottom: 1px solid #D1D7E8;
+	font-weight: bold;
+}
+
+.dataTable .header td
+{
+	border-right:0px;
+	border-left:0px;		
+}
+
+.dataTable .header2
+{
+	border: 1px solid #D1D7E8;
+	background-color: #FFF2E6;
+}
+
+.dataTable .header2 td
+{
+	border-right:0px;
+	border-left:0px;		
+}
+
+/* Filtros laterales. ----------------------------------------------------------------------------------- */
+.gwt-DisclosurePanel
+{
+	background-color: #DDD;
+	border: 1px #CCCCCC solid;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.filterBody
+{
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	padding:15px;
+	min-width:150px;
+	height: 175px;
+}
+
+.filterBody .inputText 
+{
+	width: 130px;
+}
+
+.filterPanel 
+{
+	width: 200px;
+	background-color: #F5F5F5;
+}
+
+.filterPanel table
+{
+	width: 100%;
+}
+
+.filterHeader 
+{
+	cursor: pointer;
+  	cursor: hand;
+	font-size: 13pz;
+	padding: 1px;
+	background: #F5F5F5;
+}
+
+.filterHeader:hover 
+{
+	background: #c5c5c5;
+}
+
+/* Indentaciones (filtros) -------------------------------------------------------------------------------------------------------------*/
+.level1 
+{
+	margin-left: 0px;
+}
+
+.level2 
+{
+	margin-left: 20px;
+}
+
+.level3 
+{
+	margin-left: 40px;
+}
+
+
+/* -------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------- Inner Style -----------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
+
+.inner .gwt-TabPanelBottom 
+{
+	border: 1px solid #DDD;
+	background-color: #F5F5F5;
+	padding:15px;
+}
+
+.inner .gwt-TabBar .gwt-TabBarItem
+{
+	background-color:#F5F5F5;
+}
+
+.inner .gwt-TabBar .gwt-TabBarItem-selected
+{
+	background-color: #DDD;
+}
+
+/* Paginador. ------------------------------------------------------------------------------------------- */
+.inner .paginador td 
+{
+	border:solid 1px #DDD;
+}
+
+.inner .paginador .void, 
+.inner .paginador .selected
+{
+	border-color:#F5F5F5;
+}
+
+.inner .paginador .disabled 
+{
+	color:#DDD;
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------- Outer Style -----------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
+
+/* Paginador. ------------------------------------------------------------------------------------- */
+.outer .paginador td 
+{
+	border:solid 1px #CCCCCC;
+}
+
+.outer .paginador .void, 
+.outer .paginador .selected
+{
+	border-color:white;
+}
+
+.outer .paginador .disabled 
+{
+	color:#CCCCCC;
+}

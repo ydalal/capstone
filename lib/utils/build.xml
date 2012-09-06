@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="jar" name="libs-text" xmlns:ac="antlib:net.sf.antcontrib">
+	<typedef uri="antlib:net.sf.antcontrib" classpath="net/sf/antcontrib/antlib.xml"/> 
+	<property environment="env"/>
+	<property name="debug" value="off"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.5"/>
+	<property name="source" value="1.5"/>
+	<property name="java.dirs" value="text"/>
+
+	<path id="libs-text.classpath">
+		<pathelement location="src/"/>
+		<pathelement location="bin"/>
+	</path>
+
+	<target name="clean">	
+		<delete file="libs-text.jar"/>
+		<delete dir="bin"/>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="bin"/>
+	</target>
+	
+	<target name="copysrc">
+		<copy todir="bin/eft">
+			<fileset dir="src/eft" includes="*.xml"/>
+			<fileset dir="src/eft" includes="**/*.java"/>
+		</copy>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac destdir="bin" source="${source}" target="${target}" debug="${debug}">
+			<src path="src"/>
+			<classpath refid="libs-text.classpath"/>
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile,copysrc">
+		<jar destfile="libs-text.jar">
+			<fileset dir="bin"/>
+		</jar>
+		<delete dir="bin"/>
+	</target>
+	
+</project>

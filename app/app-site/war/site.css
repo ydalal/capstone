@@ -1,0 +1,258 @@
+body
+{
+	background-image: url(resources/bkgtile.gif) !important; 
+	color:#EEE !important; 
+	font-size:100%; /* Necesario para permitir trabajar con EM el tamaño de los textos */
+}
+
+.jjd
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index: 15;
+}
+
+#menuContainer
+{
+	background-image: url(resources/background.jpg);
+	position:fixed;
+	top:0;
+	right:0;
+	width:100%;
+	height:62px;
+	z-index: 10;
+}
+
+#titleContainer
+{
+	margin-left:80px;
+	margin-top:80px;
+}
+
+#statusContainer
+{
+	margin:0px 60px;
+}
+
+#contentContainer
+{
+	margin:10px 60px;
+	z-index: -2;
+}
+
+/* --------------------------- Menu Principal de la página --------------------------*/ 
+.menu
+{
+	margin-right:100px;
+	margin-top:20px;
+	float:right;
+}
+
+.menu td
+{
+	padding:3px 10px;
+	color:white;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:16px;
+}
+
+.menu .selected
+{
+	background: #7cacd4;
+	border-radius: 10px;
+}
+
+.menu .hover
+{
+	background-color:white;
+	border-radius: 10px 10px 0px 0px / 10px 10px 0px 0px;
+	color:#003fa0;
+}
+
+.menu .nosub
+{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.menu .space
+{
+	width:50px;
+	background-color:transparent !important;
+}
+
+.menu-glass
+{
+	background-color:white;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+/* --------------------------- Menu Secundario --------------------------*/
+.submenu
+{
+	border-bottom:1px solid #7cacd4;
+	background-color:white;
+	background: url(resources/trans-border4.png) no-repeat bottom right,
+				url(resources/trans-border4.png) no-repeat bottom left white;
+	min-height:100px;
+	z-index: 12;
+}
+
+.bigger
+{
+	border-radius: 0px 10px 0px 0px / 0px 10px 0px 0px;
+}
+
+/* ---------------------------- Otros estilos -----------------------------*/
+
+.submenu .subtable
+{
+	/* OJO: Cualquier estilo que agregue márgenes laterales a la tabla puede potencialmente afectar que el menu reconozca bien el tamaño del elemento. */
+	margin-top: 15px;
+	color:#003fa0;
+}
+
+.submenu .subtable td
+{
+	padding: 2px;
+}
+
+.submenu .subtable .categories
+{
+	font-weight:bold;
+	color:black;
+	text-transform:uppercase;
+}
+
+.submenu .subtable a
+{
+	text-decoration:none;
+}
+
+.transparent
+{
+	opacity:0.25;
+}
+
+.inline
+{
+	display:inline;
+}
+
+.small
+{
+	font-size:0.875em;
+}
+
+.emphasis
+{
+	font-style:italic;
+}
+
+/* -------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------- Commons ---------------------------------------------*/
+/* -------------------------------------------------------------------------------------------------*/
+
+body, table, td, tr, div, baseBox 
+{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+.title
+{
+	color: #006eb6;
+	font-size: 25px;
+	margin:20px 20px 20px 40px;
+	font-style:italic;
+}
+
+.error
+{
+	color:#FF8C00;
+	font-weight:bold;
+}
+
+.status
+{
+	font-size: 12px;
+	font-weight: bold;
+	color:#0175C0;/* #8B4513;*/
+	text-indent: 1px;
+}
+
+.bold
+{	
+	font-weight: bold;
+}
+
+.center
+{	
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+}
+
+.floatRight
+{
+	float:right;
+	margin-right:3px;
+}
+
+.floatLeft
+{
+	float:right;
+	margin-right:3px;
+}
+
+.smallIcon
+{
+	width:15px;
+	height:15px;
+}
+
+.mediumIcon
+{
+	width:20px;
+	height:20px;
+}
+
+.bigIcon
+{
+	width:25px;
+	height:25px;
+}
+
+.biggerIcon
+{
+	top: 30%;   
+    left: 40%;   
+    position: absolute; 
+}
+
+.handCursor
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+.header
+{
+	font-size: 12px;
+    font-weight: bold;
+}
+
+.oddRow
+{
+	background-color:#F5F5F5;
+}
+
+.evenRow
+{
+	background-color:#FFFFFF;
+}
+
+
