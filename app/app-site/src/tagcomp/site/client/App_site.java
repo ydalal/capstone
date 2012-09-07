@@ -17,7 +17,6 @@ import com.google.gwt.user.client.ui.RootPanel;
 public class App_site implements EntryPoint
 {
 	private Menu menu;
-	private StatusLabel status;
 
 	/**
 	 * This is the entry point method.
@@ -27,7 +26,7 @@ public class App_site implements EntryPoint
 		// SharedResources.instance.css().ensureInjected();
 
 		// Coloco el label de estado para mensajes.
-		status = new StatusLabel();
+		StatusLabel status = new StatusLabel(true);
 		RootPanel.get("statusContainer").add(status);
 		status.setStatus("Utilice el menu principal para navegar", StatusStyle.NORMAL, 0);
 		
@@ -40,7 +39,6 @@ public class App_site implements EntryPoint
 		// Me conecto a la historia.
 		//History.addValueChangeHandler(this);
 		//History.fireCurrentHistoryState();
-
 	}
 
 	/**
@@ -56,7 +54,7 @@ public class App_site implements EntryPoint
 			{
 				// Ojo que si no eliminamos el comportamiento del click por defecto se va a redireccionar la página, causando errores con "statusCode: 0".
 				event.preventDefault();
-				status.setStatus("Click!", StatusStyle.ERROR);
+				StatusLabel.getMain().setStatus("Click!", StatusStyle.ERROR);
 			}
 		});
 		
@@ -66,4 +64,5 @@ public class App_site implements EntryPoint
 		new LoginMenuOptions(menu, 2);
 		RootPanel.get("menuContainer").add(menu);
 	}
+	
 }

@@ -1,4 +1,4 @@
-package tagcomp.security;
+package tagcomp.server;
 
 // Copyright (c) 2006 Damien Miller <djm@mindrot.org>
 //

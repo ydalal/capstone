@@ -1,7 +1,5 @@
 package tagcomp.widgets;
 
-import java.util.ResourceBundle;
-
 import tagcomp.resources.SharedResources;
 
 import com.google.gwt.user.client.Timer;
@@ -36,6 +34,12 @@ public class StatusLabel extends Label
 			return style;
 		}
 	};
+
+	private static StatusLabel instance;
+	public static StatusLabel getMain()
+	{
+		return instance;
+	}
 	
 	private Timer deleteTimer;
 	private PopupPanel loadingPanel;
@@ -61,6 +65,13 @@ public class StatusLabel extends Label
 			loadingPanel.setStyleName("loadingIcon");
 			loadingPanel.hide();
 		}
+	}
+	
+	public StatusLabel(boolean main)
+	{
+		this();
+		if(main)
+			instance = this;
 	}
 	
 	/**
